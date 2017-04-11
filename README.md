@@ -50,23 +50,3 @@ week7-rm-rf-mario
 | ID  | DATE | NAME | TRANSACTION_VALUE |
 | ------------- | ------------- | ------------- | ------------- |
 | SERIAL PRIMARY KEY | DATE DEFAULT CURRENT_DATE  |  VARCHAR(200) NOT NULL  |  INT NOT NULL
-
-## Stretch Goals
-- Add users
-
-## ToDo
-#### Day 1
-- [x] Set up server (Jack/Hiba)
-- [x] Set up database (Mario/Lawson)
-- [x] Deploy to Heroku (Mario/Lawson)
-
-#### Day 2
-- [x] set up handlebars
-- [x] populate layouts/header.hbs
-- [x] set up home route
-- [x] set up form route
-- [x] add a header partial
-
-## Style Guide
-- ES6 on the back-end
-- 2-space indentation
