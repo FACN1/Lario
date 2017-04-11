@@ -1,11 +1,11 @@
-const handler = (request, reply) => {
+const formHandler = (request, reply) => {
   reply.view('form', {
     title: 'Update'
   });
-}
+};
 
 module.exports = {
   method: 'GET',
   path: '/form',
-  handler: handler
-}
+  handler: formHandler
+};
