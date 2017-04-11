@@ -3,11 +3,8 @@ const inert = require('inert');
 const vision = require('vision');
 const path = require('path');
 const handlebars = require('handlebars');
-
-
 const routes = require('./routes');
 
-// create a new server and open a connection
 const server = new hapi.Server();
 
 server.connection({

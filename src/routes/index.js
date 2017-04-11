@@ -1,7 +1,12 @@
-// Export all the routes in one array
+const staticFiles = require('./static.js');
+const form = require('./form.js');
+const transact = require('./transact.js');
+const home = require('./home.js');
+
+
 module.exports = [
-  require('./static.js'),
-  require('./form.js'),
-  require('./transact.js'),
-  require('./home.js')
-]
+  staticFiles,
+  form,
+  transact,
+  home
+];
