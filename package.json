@@ -5,12 +5,10 @@
   "main": "start.js",
   "scripts": {
     "prepush": "npm run lint",
-    "lint": "./node_modules/.bin/eslint './+(src|test)/**/*.js'",
+    "lint": "./node_modules/.bin/eslint **/*.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/start.js",
-    "dev": "nodemon src/start.js",
-    "prepush": "npm run lint",
-    "lint": "./node_modules/.bin/eslint **/*.js"
+    "dev": "nodemon src/start.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +27,7 @@
     "inert": "^4.2.0",
     "joi": "^10.4.1",
     "pg": "^6.1.5",
+    "tape": "^4.6.3",
     "url": "^0.11.0",
     "vision": "^4.1.1"
   },

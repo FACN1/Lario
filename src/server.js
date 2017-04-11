@@ -11,7 +11,7 @@ server.connection({
   port: process.env.PORT || 9000
 });
 
-server.register([inert, vision, handlebars], (err) => {
+server.register([inert, vision], (err) => {
   if (err) throw err;
   server.route(routes);
 
