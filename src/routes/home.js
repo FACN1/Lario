@@ -20,6 +20,6 @@ const homeHandler = (request, reply) => {
 
 module.exports = {
   method: 'GET',
-  path: '/',
+  path: '/home',
   handler: homeHandler
 };
