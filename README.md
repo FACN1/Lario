@@ -6,8 +6,8 @@ Find us on [Heroku](https://kittyio.herokuapp.com/)...
 
 ...or run locally:
 ```bash
-git clone https://github.com/FACN1/week7-rm-rf-mario.git
-cd week7-rm-rf-mario
+git clone https://github.com:FACN1/Lario.git
+cd Lario
 npm install
 npm start
 ```
@@ -18,8 +18,20 @@ npm start
 
 > So that I can maintain the respect of my peers
 
+**As a member of Founders and Coders, who wants to learn from my fellow devs**
+> **I want to** log in with my Github account
+
+>**So that** I can use my Github organisation's info to see the kitty's transactions.
+
+**As any user who is logged in**
+>**I want to** see my username & Github profile picture on the homepage
+
+>**So that** I benefit from logging in with Github OAuth, and don't have to do any profile setup on your site.
+
+
+
 ## File Structure
-week7-rm-rf-mario
+Lario
 - public/
   + style.css
 - src/
@@ -42,7 +54,8 @@ week7-rm-rf-mario
 
 ## App Logic
 - User Interface:
-  - Main: go to the page and automatically render the last `n` transactions, and the total in the kitty
+  - Main: go to the login page to log-in through github
+  - Then go to the page and automatically render the last `n` transactions, and the total in the kitty
   - Update: takes you to a form to add to or withdraw money from the kitty
 
 ## Database Schema
