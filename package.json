@@ -4,11 +4,12 @@
   "description": "",
   "main": "start.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/start.js",
-    "dev": "nodemon src/start.js",
     "prepush": "npm run lint",
-    "lint": "./node_modules/.bin/eslint **/*.js"
+    "lint": "./node_modules/.bin/eslint **/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "coverage": "istanbul cover ./tests/back-end/tests.js",
+    "start": "node src/start.js",
+    "dev": "nodemon src/start.js"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "husky": "^0.13.3"
+    "husky": "^0.13.3",
+    "istanbul": "^0.4.5"
   }
 }
