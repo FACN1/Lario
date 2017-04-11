@@ -1,14 +1,14 @@
 const joi = require('joi');
 
-let dbQueries = {};
+const dbQueries = {};
 
-dbQueries.postTransaction = function(connPool, data, callback) {
+dbQueries.postTransaction = (connPool, data, callback) => {
   const schema = joi.object({
     name: joi.string().regex(/^[a-zA-Z]{3,40}$/),
     amount: joi.number().integer()
-  })
+  });
 
-  joi.validate({name: data.name, amount: data.amount}, schema, (err, validated) => {
+  joi.validate({ name: data.name, amount: data.amount }, schema, (err, validated) => {
     if (err) {
       callback('Invalid Data');
       return;
@@ -19,14 +19,14 @@ dbQueries.postTransaction = function(connPool, data, callback) {
       [validated.name, validated.amount],
       callback
     );
-  })
-}
+  });
+};
 
-dbQueries.retrieveTransactions = function(connPool, callback) {
+dbQueries.retrieveTransactions = (connPool, callback) => {
   connPool.query(
     'SELECT name, transaction_value, transaction_date FROM kitty ORDER BY transaction_date DESC',
     callback
   );
-}
+};
 
 module.exports = dbQueries;
