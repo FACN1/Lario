@@ -8,7 +8,9 @@
     "lint": "./node_modules/.bin/eslint './+(src|test)/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/start.js",
-    "dev": "nodemon src/start.js"
+    "dev": "nodemon src/start.js",
+    "prepush": "npm run lint",
+    "lint": "./node_modules/.bin/eslint **/*.js"
   },
   "repository": {
     "type": "git",
