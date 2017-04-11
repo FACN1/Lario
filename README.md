@@ -57,7 +57,7 @@ Lario
   - Main: go to the login page to log-in through github
   - Then go to the page and automatically render the last `n` transactions, and the total in the kitty
   - Update: takes you to a form to add to or withdraw money from the kitty
-
+ 
 ## Database Schema
 
 | ID  | DATE | NAME | TRANSACTION_VALUE |
