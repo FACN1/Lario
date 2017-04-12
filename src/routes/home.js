@@ -21,5 +21,8 @@ const homeHandler = (request, reply) => {
 module.exports = {
   method: 'GET',
   path: '/home',
+  config: {
+    auth: 'jwt'
+  },
   handler: homeHandler
 };

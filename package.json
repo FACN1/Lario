@@ -25,6 +25,7 @@
     "env2": "^2.1.1",
     "handlebars": "^4.0.6",
     "hapi": "^16.1.1",
+    "hapi-auth-jwt2": "^7.2.4",
     "inert": "^4.2.0",
     "joi": "^10.4.1",
     "jsonwebtoken": "^7.3.0",

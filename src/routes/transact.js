@@ -13,5 +13,8 @@ const transactionHandler = (request, reply) => {
 module.exports = {
   method: 'POST',
   path: '/transact',
+  config: {
+    auth: 'jwt'
+  },
   handler: transactionHandler
 };
