@@ -10,4 +10,12 @@ tape('check the home route', (t) => {
   });
 });
 
+tape('check the form route', (t) => {
+  server.inject({ url: '/form', method: 'GET' }, (rep) => {
+    t.equal(rep.statusCode, 200, 'statuscode in form route is 200');
+    t.end();
+  });
+});
+
+
 tape.onFinish(() => process.exit(0));
