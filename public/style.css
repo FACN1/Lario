@@ -57,6 +57,33 @@ body {
 	background-color: #f0f5f5;
 }
 
+.login-section {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0.5rem;
+	color: white;
+	background-color: #336699;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+	z-index: 1;
+}
+
+h4 {
+	text-align: center;
+	font: 6rem sans-serif;
+}
+
+.login {
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+
+.loginP {
+	text-align: center;
+	font: 2rem sans-serif;
+}
+
 .page-title {
 	display: flex;
 	justify-content: center;
@@ -92,6 +119,24 @@ body {
 
 .nav-button:hover {
 	box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.username {
+	display: flex !important;
+	position: absolute;
+	right: 5rem;
+	margin-top: 1.5rem;
+	font-size: 2rem;
+	margin-left: 2rem;
+}
+
+.avatar {
+	display: flex !important;
+	position: absolute;
+	right: 1rem;
+	margin-top: 1.5rem;
+	width: 2.5rem;
+	height: 2.5rem;
 }
 
 .list-wrap {
