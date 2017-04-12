@@ -12,7 +12,9 @@ const homeHandler = (request, reply) => {
     const data = {
       title: 'Kitty I/O',
       total: kittyTotal,
-      rows: response.rows.slice(0, NUM_OF_RESULTS)
+      rows: response.rows.slice(0, NUM_OF_RESULTS),
+      username: request.auth.credentials.user.username,
+      avatar_url: request.auth.credentials.user.img_url
     };
     reply.view('home', data);
   });
