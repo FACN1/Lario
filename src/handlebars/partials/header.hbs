@@ -1,9 +1,9 @@
 <header class="header-wrap">
-  {{#if username}}
-    <strong>{{username}}</strong>
-    <img src="{{avatar_url}}" alt="avatar">
-  {{/if}}
   <a href="/home" class="nav-button fa fa-home" style="font-size:30px"></a>
   <h1 class="page-title">{{upperCase title}}</h1>
-  <a href="/form" class="nav-button fa fa-ils" style="font-size:30px"></a>
+  <a href="/form" class="nav-button fa fa-plus" style="font-size:30px"></a>
+  {{#if username}}
+    <strong class="username">{{username}}</strong>
+    <img class="avatar" src="{{avatar_url}}" alt="avatar">
+  {{/if}}
 </header>

@@ -72,7 +72,6 @@ const tempHandler = (request, reply) => {
           accessToken: permToken,
         };
         jwt.sign(payload, process.env.SECRET, jwtOptions, (jwtError, token) => {
-          console.log('hey');
           reply.redirect('/home').state('token', token, {
             path: '/',
             isHttpOnly: false,
