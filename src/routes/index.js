@@ -3,6 +3,8 @@ const form = require('./form.js');
 const transact = require('./transact.js');
 const home = require('./home.js');
 const login = require('./login.js');
+const redirect = require('./redirect.js');
+const temp = require('./temp.js');
 
 
 module.exports = [
@@ -10,5 +12,7 @@ module.exports = [
   form,
   transact,
   home,
-  login
+  login,
+  redirect,
+  temp
 ];
