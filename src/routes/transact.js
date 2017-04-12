@@ -6,12 +6,15 @@ const transactionHandler = (request, reply) => {
     if (err) {
       reply(`error when adding to database: ${err}`);
     }
-    reply.redirect('/');
+    reply.redirect('/home');
   });
 };
 
 module.exports = {
   method: 'POST',
   path: '/transact',
+  config: {
+    auth: 'jwt'
+  },
   handler: transactionHandler
 };

@@ -1,5 +1,2 @@
-module.exports = (input) => {
-  if (input) {
-    input.toUpperCase();
-  }
-};
+module.exports = input =>
+  input.toUpperCase();
