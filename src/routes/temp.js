@@ -48,15 +48,8 @@ const tempHandler = (request, reply) => {
         if (orgError) {
           reply(orgError);
         }
-        let counter = 0;
         const parsedOrgBody = JSON.parse(orgBody);
-        parsedOrgBody.map((object) => {
-          if (object.login === 'FACN1') {
-            counter += 1;
-          }
-          return counter;  // this is just for f*cking linter to work
-        });
-        if (counter === 0) {
+        if (!parsedOrgBody.find(organization => organization.login === 'FACN1')) {
           reply.redirect('/');
         }
         const jwtOptions = {
