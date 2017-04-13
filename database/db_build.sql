@@ -1,15 +1,15 @@
 BEGIN;
 
-DROP TABLE IF EXISTS kitty cascade;
+DROP TABLE IF EXISTS transactions cascade;
 
-CREATE TABLE kitty (
+CREATE TABLE transactions (
   id SERIAL PRIMARY KEY,
-  transaction_date DATE DEFAULT CURRENT_DATE,
+  TDate DATE DEFAULT CURRENT_DATE,
   name VARCHAR(200) NOT NULL,
-  transaction_value INT NOT NULL
+  value INT NOT NULL
 );
 
-INSERT INTO kitty (name, transaction_value)
+INSERT INTO transactions (name, value)
 VALUES
 ('Mario', 25), ('Edgar', 25), ('Eoin', -50);
 
