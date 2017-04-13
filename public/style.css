@@ -121,6 +121,17 @@ h4 {
 	box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
 }
 
+.logout {
+	display: flex !important;
+	text-decoration: none;
+	background-color: red;
+	color: white;
+	position: absolute;
+	right: 5rem;
+	margin-top: 1.5rem;
+	font-size: 2rem;
+	margin-right: 14rem;
+}
 .username {
 	display: flex !important;
 	position: absolute;

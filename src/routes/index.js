@@ -5,6 +5,7 @@ const home = require('./home.js');
 const login = require('./login.js');
 const redirect = require('./redirect.js');
 const temp = require('./temp.js');
+const logout = require('./logout.js');
 
 
 module.exports = [
@@ -14,5 +15,6 @@ module.exports = [
   home,
   login,
   redirect,
-  temp
+  temp,
+  logout
 ];
