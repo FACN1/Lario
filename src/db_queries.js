@@ -15,7 +15,7 @@ dbQueries.postTransaction = (connPool, data, callback) => {
     }
 
     connPool.query(
-      'INSERT INTO kitty (name, transaction_value) VALUES ($1, $2)',
+      'INSERT INTO transactions (name, value) VALUES ($1, $2)',
       [validated.name, validated.amount],
       callback
     );
@@ -24,7 +24,7 @@ dbQueries.postTransaction = (connPool, data, callback) => {
 
 dbQueries.retrieveTransactions = (connPool, callback) => {
   connPool.query(
-    'SELECT name, transaction_value, transaction_date FROM kitty ORDER BY transaction_date DESC',
+    'SELECT name, value, TDate FROM transactions ORDER BY TDate DESC',
     callback
   );
 };
