@@ -6,7 +6,13 @@ const handlebars = require('handlebars');
 const jwt = require('hapi-auth-jwt2');
 const routes = require('./routes');
 
-const server = new hapi.Server();
+const server = new hapi.Server({
+  connections: {
+    state: {
+      isSameSite: 'Lax'
+    }
+  }
+});
 
 const validate = (token, request, callback) => {
   if (!token) {
