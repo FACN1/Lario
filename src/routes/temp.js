@@ -1,6 +1,5 @@
 const Request = require('request');
 const jwt = require('jsonwebtoken');
-const queryString = require('querystring');
 require('env2')('./config.env');
 
 const tempHandler = (request, reply) => {
@@ -14,18 +13,19 @@ const tempHandler = (request, reply) => {
       client_id: process.env.CLIENT_ID,
       client_secret: process.env.CLIENT_SECRET,
       code: request.query.code
-    }
+    },
+    json: true
   };
   Request(postRequestOptions, (error, response, body) => {
     if (error) {
       reply(error);
     }
-    const responseBody = queryString.parse(body);
-    const permToken = responseBody.access_token;
+    const permToken = body.access_token;
 
     const getRequestOptions = {
       url: 'https://api.github.com/user',
       method: 'GET',
+      json: true,
       headers: {
         'User-Agent': 'oauth_github_jwt',
         Authorization: `token ${permToken}`,
@@ -35,10 +35,10 @@ const tempHandler = (request, reply) => {
       if (getError) {
         reply(getError);
       }
-      const parsedGetBody = JSON.parse(getBody);
       const orgOptions = {
         method: 'GET',
-        url: parsedGetBody.organizations_url,
+        url: getBody.organizations_url,
+        json: true,
         headers: {
           'User-Agent': 'oauth_github_jwt',
           Authorization: `token ${permToken}`,
@@ -48,8 +48,7 @@ const tempHandler = (request, reply) => {
         if (orgError) {
           reply(orgError);
         }
-        const parsedOrgBody = JSON.parse(orgBody);
-        if (!parsedOrgBody.find(organization => organization.login === 'FACN1')) {
+        if (!orgBody.find(organization => organization.login === 'FACN1')) {
           reply.redirect('/');
         }
         const jwtOptions = {
@@ -58,9 +57,9 @@ const tempHandler = (request, reply) => {
         };
         const payload = {
           user: {
-            username: JSON.parse(getBody).login,
-            img_url: JSON.parse(getBody).avatar_url,
-            user_id: JSON.parse(getBody).id,
+            username: getBody.login,
+            img_url: getBody.avatar_url,
+            user_id: getBody.id
           },
           accessToken: permToken,
         };
