@@ -2,7 +2,7 @@
 
 #### A CMS (content management system) app that keeps track of the kitty for the guest house.
 
-Find us on [Heroku](https://kittyio.herokuapp.com/)...
+Find us on [Heroku](https://lario.herokuapp.com/)...
 
 ...or run locally:
 ```bash
